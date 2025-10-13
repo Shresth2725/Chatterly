@@ -62,7 +62,7 @@ export async function sendFriendRequest(req, res) {
 
     if (existingRequest) {
       return res.status(400).json({
-        message: "A friend request i already exists between you and this user",
+        message: "A friend request is already exists between you and this user",
       });
     }
 
