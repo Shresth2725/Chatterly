@@ -17,7 +17,7 @@ router.post("/logout", logout);
 
 router.post("/onboard", protectedRoute, onboard);
 
-router.post("/me", protectedRoute, (req, res) => {
+router.get("/me", protectedRoute, (req, res) => {
   res.status(200).json({ success: true, user: req.user });
 });
 
