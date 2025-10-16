@@ -7,7 +7,7 @@ export const signup = async (signupData) => {
 
 export const getAuthUser = async () => {
   const res = await axiosInstance.get("/auth/me");
-  console.log("api", res);
+  // console.log("api", res);
   return res.data;
 };
 

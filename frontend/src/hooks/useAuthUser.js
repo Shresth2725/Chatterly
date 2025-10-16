@@ -9,7 +9,7 @@ const useAuthUser = () => {
     retry: false,
   });
 
-  console.log("useAth: ", authUser.data);
+  // console.log("useAth: ", authUser.data);
 
   return { isLoading: authUser.isLoading, authUser: authUser.data?.user };
 };

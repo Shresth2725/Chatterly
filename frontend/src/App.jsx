@@ -14,7 +14,7 @@ const App = () => {
   const { isLoading, authUser } = useAuthUser();
 
   const isAuthenticated = Boolean(authUser);
-  console.log(isAuthenticated);
+  // console.log(isAuthenticated);
 
   const isOnboarded = authUser?.isOnboarded;
 
