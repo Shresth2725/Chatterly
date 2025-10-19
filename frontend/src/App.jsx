@@ -8,7 +8,7 @@ import NotificationPage from "./pages/NotificationPage";
 import PageLoader from "./components/PageLoader.jsx";
 import { Navigate, Route, Routes } from "react-router";
 import useAuthUser from "./hooks/useAuthUser.js";
-import { Home } from "lucide-react";
+import Layout from "./components/Layout.jsx";
 
 const App = () => {
   const { isLoading, authUser } = useAuthUser();
@@ -21,13 +21,15 @@ const App = () => {
   if (isLoading) return <PageLoader />;
 
   return (
-    <div className="h-screen" data-theme="night">
+    <div className="h-screen" data-theme="forest">
       <Routes>
         <Route
           path="/"
           element={
             isAuthenticated && isOnboarded ? (
-              <HomePage />
+              <Layout>
+                <HomePage />
+              </Layout>
             ) : (
               <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
             )
