@@ -133,11 +133,11 @@ export async function getOutgoingFriendRequest(req, res) {
       sender: req.user.id,
       status: "pending",
     }).populate(
-      "recepient",
+      "recipient",
       "fullName  profilePic nativeLanguage learningLanguage"
     );
 
-    res.status(200).json({ outgoingRequest });
+    res.status(200).json(outgoingRequest);
   } catch (error) {
     console.log("Error in getOutgoingFriendRequest controller", error);
     res.status(500).json({ message: "Internal Server Error" });

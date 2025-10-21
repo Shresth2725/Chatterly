@@ -20,6 +20,6 @@ router.post("/friend-request/:id", sendFriendRequest);
 router.post("/friend-request/:id/accept", acceptFriendRequest);
 
 router.get("/friend-request", getFriendRequest);
-router.get("/outgoing-friend-request", getOutgoingFriendRequest);
+router.get("/outgoing-friend-requests", getOutgoingFriendRequest);
 
 export default router;
