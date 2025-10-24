@@ -13,6 +13,7 @@
     "@stream-io/video-react-sdk": "^1.24.1",
     "@tanstack/react-query": "^5.90.3",
     "axios": "^1.12.2",
+    "chatterly": "file:..",
     "lucide-react": "^0.545.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
